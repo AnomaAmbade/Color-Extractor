@@ -1,0 +1,101 @@
+{% import 'bootstrap/wtf.html' as wtf %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="static/assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="static/assets/icons/site.webmanifest">
+    <title>Color Extractor</title>
+</head>
+
+<body>
+    <div class="main-container">
+
+        <!-- title -->
+        <section class="title-container">
+            <div class="container">
+                <div class="title">
+                    <h1 class="title-heading">Color Extractor</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- image -->
+        <section class="image-container">
+            <div class="container">
+                <div class="image">
+                    <img src="{{ url_for('static', filename=image) }}" alt="image" width="100%">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- upload wtf form -->
+        <section class="upload-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto form">
+                        {{ wtf.quick_form(form, button_map={"extract color":"primary"}, novalidate=True) }}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- color code table -->
+        <section class="table-container">
+            <div class="color-table">
+                <table>
+                    {% if extracted_colors != []: %}
+                    <thead>
+                        <tr>
+                            <th>Color</th>
+                            <th>Color Code</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for color in extracted_colors: %}
+                        <tr class="color-row">
+                            <td class="color-block">
+                                <div class="block">
+                                    <div class="color" style="background-color:{{ color[0] }}"></div>
+                                </div>
+                            </td>
+                            <td class="color-code">{{ color[0] }}</td>
+                        </tr>
+                        {% endfor %}
+
+                    </tbody>
+                    {% endif %}
+                </table>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <div class="footer-container">
+            <div class="container">
+                <footer class="container-fluid footer-center">
+                    <p>Made With ❤️ By Anoma.</p>
+                </footer>
+            </div>
+            <!-- icon credit -->
+            <div style="text-align: center;">Icons made by <a class="icon-credit" href="https://www.freepik.com"
+                    title="Freepik">Freepik</a> from <a class="icon-credit" href="https://www.flaticon.com/"
+                    title="Flaticon">www.flaticon.com</a></div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

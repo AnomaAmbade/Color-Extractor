@@ -1,0 +1,155 @@
+body {
+    background: transparent;
+    width: 100%;
+}
+
+.main-container{
+    margin: 10px 0 0;
+    align-items: center;
+    justify-content: center;
+    top: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.title-container {
+    background-color: white;
+    padding: 10px 0px 20px;
+}
+
+.image-container {
+    height: 500px;
+    margin: auto;
+    padding: 10px;
+}
+
+.upload-container {
+    font-family: 'Merriweather', serif;
+    margin: 30px auto; /*50px*/
+}
+
+.table-container {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 100px auto;
+}
+
+div.title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+}
+
+h1.title-heading {
+    background-image: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.form {
+    margin: 0 auto;
+    padding: 20px;
+    row-gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 600px;
+    height: 400px;
+    padding: 10px;
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+    max-height: 400px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+.color-table {
+    margin: 50px 100px;
+    justify-content: center;
+}
+
+table {
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 500px;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    row-gap: 40px;
+}
+
+tr.color-row {
+    /* increase row spacing */
+    border-right: hidden;
+    height: 30px;
+}
+
+td.color-code {
+    justify-content: center;
+}
+
+th {
+    font-weight: bold;
+    font-size: 1.15rem;
+}
+
+div.color {
+    border: 2px solid;
+    padding: 5px;
+    height: 10px;
+    width: 100px;
+    max-width: 100px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.footer-container{
+    margin-top: 300px;
+    padding: 10px 0 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(219, 180, 180);
+    
+}
+
+footer{
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.icon-credit:link{
+    color: red;
+    text-decoration: none;
+}
+.icon-credit:hover{
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* ------gradient reference-------
+fossheim.io/writing/posts/css-text-gradient/
+css-tricks.com/snippets/css/gradient-text/
+
+---------resize image reference----------
+https://imagekit.io/blog/how-to-resize-image-in-html/
+https://www.freecodecamp.org/news/css-responsive-image-tutorial/
+
+
+---------table centering references------------
+https://granneman.com/webdev/coding/css/centertables
+*/
