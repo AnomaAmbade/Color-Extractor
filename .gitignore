@@ -1,7 +1,6 @@
 .env
-__pycache__\
+__pycache__/
 config.py
 other.txt
-\__pycache__\config.cpython-37.pyc
-\__pycache__\extract_color.cpython-37.pyc
+
 
